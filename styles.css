@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* paragraph color */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* bkgd, headings, & button color */
+  --very-light-gray: hsl(0, 0%, 95%);
+  /* body text styles */
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+
+  background-color: var(--very-light-gray);
+}
+
+/* general/global/default styles */
+.container {
+  max-width: 87vw;
+  height: 100vh;
+  /* above is subject to change */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.938rem;
+  /* 0.938rem = 15px */
+}
+.box {
+  padding: 48px;
+  padding-left: 48px;
+}
+img {
+  padding-bottom: 42px;
+}
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  color: var(--very-light-gray);
+  font-size: 2.5rem;
+  /* 2.5rem = 48px */
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+p {
+  line-height: 1.563rem;
+  /* 1.563rem = 25px */
+  max-width: 231px;
+  /* display: inline-block; */
+}
+
+/* sedans container */
+.sedans {
+  background-color: var(--bright-orange);
+}
+
+/* suvs container */
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+/* luxury container */
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+/* learn more button */
+a:link,
+a:visited {
+  text-decoration: none;
+}
+.btn {
+  width: 146px;
+  height: 48px;
+  border-radius: 22px;
+  background-color: var(--very-light-gray);
+  padding: 18px 31px 19px 32px;
+  display: inline-block;
+  margin-top: 32px;
+  white-space: nowrap;
+  border: 2px solid var(--very-light-gray);
+  /*!!--remember to change this margin in media query--!!*/
+}
+.btn-sedans {
+  color: var(--bright-orange);
+}
+.btn-suvs {
+  color: var(--dark-cyan);
+}
+.btn-luxury {
+  color: var(--very-dark-cyan);
+}
+a:hover {
+  border: 2px solid var(--very-light-gray);
+  color: var(--very-light-gray);
+  cursor: pointer;
+}
+.btn-sedans:hover {
+  background-color: var(--bright-orange);
+}
+.btn-suvs:hover {
+  background-color: var(--dark-cyan);
+}
+.btn-luxury:hover {
+  background-color: var(--very-dark-cyan);
+}
