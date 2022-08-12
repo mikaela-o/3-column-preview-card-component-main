@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,39 +20,50 @@
   background-color: var(--very-light-gray);
 }
 
-/* general/global/default styles */
+/*********** MOBILE styles ***********/
 .container {
-  max-width: 87vw;
-  height: 100vh;
-  /* above is subject to change */
-  margin: 0 auto;
+  width: 87.2vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 0.938rem;
   /* 0.938rem = 15px */
+  border-radius: 9px;
+  overflow: hidden;
+  margin: 88px 6.4%;
 }
+
 .box {
-  padding: 48px;
-  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 33.3%;
+  /* max-height: 442px; */
+  padding: 3rem;
+  padding-right: 1.5rem;
+  align-items: flex-start;
 }
-img {
-  padding-bottom: 42px;
-}
+
 h2 {
   font-family: "Big Shoulders Display", sans-serif;
   color: var(--very-light-gray);
   font-size: 2.5rem;
-  /* 2.5rem = 48px */
+  line-height: 2.5rem;
+  /* 2.5rem = 40px */
   text-transform: uppercase;
-  margin-bottom: 42px;
+  /* padding: 2rem 0; */
+  padding: 1.907rem 0;
+  margin-block: 0;
 }
+
 p {
   line-height: 1.563rem;
   /* 1.563rem = 25px */
-  max-width: 231px;
-  /* display: inline-block; */
+  font-weight: 400;
+  padding: 0 1.5rem 0 0;
+  padding-bottom: 2rem;
 }
 
 /* sedans container */
@@ -78,15 +87,15 @@ a:visited {
   text-decoration: none;
 }
 .btn {
+  font-size: 0.938rem;
   width: 146px;
   height: 48px;
-  border-radius: 22px;
+  border-radius: 23px;
   background-color: var(--very-light-gray);
-  padding: 18px 31px 19px 32px;
-  display: inline-block;
-  margin-top: 32px;
-  white-space: nowrap;
-  border: 2px solid var(--very-light-gray);
+  padding: 0.9rem auto;
+  padding-top: 0.9rem;
+  text-align: center;
+  border: 2.5px solid var(--very-light-gray);
   /*!!--remember to change this margin in media query--!!*/
 }
 .btn-sedans {
@@ -98,10 +107,14 @@ a:visited {
 .btn-luxury {
   color: var(--very-dark-cyan);
 }
+/* btn hover states */
 a:hover {
-  border: 2px solid var(--very-light-gray);
+  border: 2.5px solid var(--very-light-gray);
   color: var(--very-light-gray);
   cursor: pointer;
+  text-align: center;
+  padding: 0.9rem auto;
+  padding-top: 0.9rem;
 }
 .btn-sedans:hover {
   background-color: var(--bright-orange);
@@ -111,4 +124,25 @@ a:hover {
 }
 .btn-luxury:hover {
   background-color: var(--very-dark-cyan);
+}
+
+/* i think?? i may be about ready to start adding media queries at this point */
+/* the phone (medium) view looks pretty good in chrome dev tools */
+
+/*********** DESKTOP styles [1440x800] ***********/
+@media only screen and (min-width: 1000px) {
+  .container {
+    flex-direction: row;
+    max-width: 63.9vw;
+    height: 62.5vh;
+    /* height: auto; */
+    /* height: 500px; */
+    flex: 1 1 63.9vw;
+    margin: 10.688rem 16.25rem 8.063rem;
+  }
+  .box {
+    width: 33.3%;
+    height: 100%;
+    justify-content: space-between;
+  }
 }
